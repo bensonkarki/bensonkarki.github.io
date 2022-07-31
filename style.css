@@ -138,7 +138,7 @@ header {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 70px;
     box-shadow: var(--bs);
 }
 
