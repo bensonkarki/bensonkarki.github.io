@@ -271,7 +271,7 @@ header {
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em);
-        height: 42px;
+        height: 45px;
         color: var(--clr-light);
     }
 }
