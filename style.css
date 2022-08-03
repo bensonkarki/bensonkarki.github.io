@@ -13,9 +13,9 @@
     --fw-reg: 500;
     --fw-bold: 700;
 
-    --clr-light: #F7f7f3;
-    --clr-dark: #0b0c0c;
-    --clr-accent: #Ec310d;
+    --clr-light: #fff;
+    --clr-dark: #000;
+    --clr-accent: #D01212;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -71,7 +71,7 @@ strong { font-weight: var(--fw-bold); }
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
-    color: var(--clr-dark);
+    color: var(--clr-light);
     text-decoration: none;
     cursor: pointer;
     font-size: .8rem;
@@ -138,13 +138,12 @@ header {
 }
 
 .logo {
-    max-width: 100px;
-    box-shadow: var(--bs);
+    max-width: 60px;
 }
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
+    background: var(--clr-light);
     color: var(--clr-light);
     top: 0;
     bottom: 0;
@@ -168,7 +167,7 @@ header {
 }
 
 .nav__link {
-    color: inherit;
+    color: var(--clr-dark);
     font-weight: var(--fw-bold);
     font-size: var(--fs-h2);
     text-decoration: none;
@@ -217,7 +216,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-accent);
+    background: var(--clr-dark);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -272,7 +271,8 @@ header {
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em);
-
+        height: 42px;
+        color: var(--clr-light);
     }
 }
 
@@ -280,15 +280,14 @@ header {
 
 .my-services {
     background-color: var(--clr-dark);
-    background-image: url(../img/mywallpaper1.png);
+    background-image: url(../img/mywallpaper2.png);
     background-size: cover;
-    /* background-blend-mode: multiply; */
     color: var(--clr-light);
     text-align: center;
 }
 
 .section__title--services {
-    color: var(--clr-accent);
+    color: var(--clr-light);
     position: relative;
 }
 
@@ -296,14 +295,14 @@ header {
     content: '';
     display: block;
     width: 2em;
-    height: 1px;
+    height: 2px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
-    opacity: 0.25;
+    background: var(--clr-accent);
+    opacity: 1;
 }
 
 .services {
-    margin-bottom: 4em;
+    margin-bottom: 5em;
 }
 
 .service {
@@ -322,11 +321,9 @@ header {
     .service + .service {
         margin-left: 2em;
     }
-
-    .badge-base LI-profile-badge {
-        margin: 5em;
-    }
 }
+
+/* About Me */
 
 .about-me {
     max-width: 1000px;
@@ -369,18 +366,18 @@ header {
     }
 }
 
-/* My Work */
+/* My Gallery */
 
 .my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
     text-align: center;
 }
 
 .section__subtitle--work {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .portfolio {
@@ -408,16 +405,16 @@ header {
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__item {
     transform: scale(1.2);
-    opacity: .75;
+    opacity: .5;
 }
 
 /* Footer */
 
 .footer {
-    background: #111;
+    background: var(--clr-dark);
     color: var(--clr-accent);
     text-align: center;
-    padding: 2.5em, 0em;
+    padding: 2em 0;
     font-size: var(--fs-h3);
 }
 
@@ -432,7 +429,7 @@ header {
 
 .footer__link:hover,
 .social-list__link:hover {
-    opacity: 0.7;
+    opacity: .7;
 }
 
 .footer__link:hover {
@@ -444,16 +441,18 @@ header {
     display: flex;
     justify-content: center;
     margin: 2em 0 0;
-    padding: 0em;
+    padding: 0;
 }
 
 .social-list__items {
-    margin: 0.5em;
+    margin: 0 .5em;
 }
 
 .social-list__link {
     padding: .5em;
 }
+
+/* Individual Portfolio Item Styles */
 
 .portfolio-item-individual {
     padding: 0 2em 2em;
